@@ -29,7 +29,7 @@ public class SparkPostServer implements MailServer {
     public void setMessage(Message message) {
         contentAttributes.setFrom(new AddressAttributes(message.getSender()));
         // Populate Recipients
-        List<RecipientAttributes> recipientArray = new ArrayList<RecipientAttributes>();
+        List<RecipientAttributes> recipientArray = new ArrayList<>();
         for (String recipient : message.getRecipient()) {
             RecipientAttributes recipientAttribs = new RecipientAttributes();
             recipientAttribs.setAddress(new AddressAttributes(recipient));
@@ -45,10 +45,9 @@ public class SparkPostServer implements MailServer {
 
     public boolean sendMail() {
         // Send the Email
-        IRestConnection connection = null;
         TransmissionCreateResponse transmissionResponse = null;
         try {
-            connection = new RestConnection(this.client);
+            IRestConnection connection = new RestConnection(this.client);
             transmissionResponse = ResourceTransmissions.create(connection, 0, transmission);
         } catch (SparkPostException e) {
             e.printStackTrace();

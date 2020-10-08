@@ -38,7 +38,7 @@
                     <div class="form-group">
                         <label for="recipients">To:</label>
                         <input type="text" data-bv-emailaddress-multiple="true" data-bv-emailaddress="true" class="form-control" id="recipients" placeholder="Enter Recipient email" name="recipients">
-                        <small id="emailHelp" class="form-text text-muted">Separate multiple recipient by , </small>
+                        <small id="emailHelp" class="form-text text-muted">Separate multiple recipients by comma or semicolon </small>
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject:</label>
