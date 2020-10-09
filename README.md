@@ -19,6 +19,7 @@ This project provide a private service that accepts the necessary information fr
 ### Development Environment
 
 - Java 1.8
+- Tomcat 9
 - IDEA
   - Note: to avoid API Key exposure in public, we can add API key to IDEA's project environment setting and then use `System.getenv(key)` in Java to get it back.
 
