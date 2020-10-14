@@ -32,8 +32,8 @@ My initial attempt is to implement it as a console-based application, but it's i
 ​	This project follows MVC pattern.
 
 - View: user can view email form, and write an email
-- Model: transfer users' email information to controller
-- Controller: send the email via available email providers.
+- Model: send the email via available email providers.
+- Controller: transfer users' email information to Model and render view.
 
 The reason why I chose MVC pattern is because it enhance decoupling of components. 
 
